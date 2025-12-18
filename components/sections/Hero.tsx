@@ -41,7 +41,7 @@ export default function Hero(){
                     Full Stack Developer • UI/UX Designer • Visual Graphics Designer
                 </h2>
 
-                <div className='flex flex-row mt-5 gap-10'>
+                <div className='flex justify-center md:justify-start flex-row mt-5 gap-10'>
                     <a href='https://linkedin.com/in/charles-alcantara' target='_blank'>
                         <img src="/linkedinbnw.png"></img>
                     </a>

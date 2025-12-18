@@ -56,11 +56,7 @@ export default function Projects(){
                     bg-clip-text text-transparent">
                     Projects
             </h1>
-
-            <h3 className="flex justify-center text-2xl mt-5">
-                My featured work
-            </h3>
-
+                
             <div className="block lg:hidden mt-30 flex justify-center ">
 
                 <Carousel className="justify-self-center max-w-[70%] ">
