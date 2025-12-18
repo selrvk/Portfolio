@@ -1,0 +1,41 @@
+/* @tailwindcss v4 */
+@import "tailwindcss";
+
+body {
+  color: var(--color-white);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-marquee 8s linear infinite;
+}
+
+@keyframes scroll-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.toggle-ripple {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-ripple:active {
+  opacity: 0.3;
+  transform: scale(2.5);
+  background: radial-gradient(circle, rgba(255,255,255,0.5), transparent);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+

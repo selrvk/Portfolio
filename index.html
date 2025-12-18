@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./logos/Selrvk-Logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selrvk</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+      const startVanta = () => {
+      const element = document.getElementById("vanta-bg");
+      if (element && window.VANTA && !element.dataset.vantaInitialized) {
+        window.VANTA.NET({
+          el: element,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x190d48,
+          backgroundColor: 0x0,
+          points: 20,
+          maxDistance: 20,
+          spacing: 15,
+          speed: 1.5
+        });
+        element.dataset.vantaInitialized = "true";
+      }
+    };
+    startVanta();
+
+    const interval = setInterval(() => {
+      if (document.getElementById("vanta-bg")) {
+        startVanta();
+        clearInterval(interval);
+      }
+    }, 100);
+
+    setTimeout(startVanta, 2000);
+
+  </script>
+  </head>
+
+  <body class="bg-linear-to-r from-slate-950 to-gray-900 text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  
+</html>
