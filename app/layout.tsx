@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FaultyTerminalWrapper from "@/components/FaultyTerminalWrapper";
-import PixelBlast from "@/components/PixelBlast";
-import PixelBlastWrapper from "@/components/PixelBlastWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
