@@ -1,5 +1,6 @@
 import LogoLoop from "../LogoLoop"
 import Status from "../Status";
+import Image from "next/image"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPhp, SiHtml5, SiCss3, SiNodedotjs} from 'react-icons/si';
 
@@ -20,57 +21,72 @@ interface projectprops {
     description:string,
     skillsUsed: Array<string>,
     status: string,
-    link: string
+    link: string,
+    image: string
 }
 
 
-export default function ProjectCard({name, description, skillsUsed, status, link} : projectprops){
+export default function ProjectCard({ name, description, skillsUsed, status, link, image }: projectprops) {
 
-    const filteredLogos = techLogos.filter(logo => 
-        skillsUsed.includes(logo.title)
-    );
+  const filteredLogos = techLogos.filter((logo) =>
+    skillsUsed.includes(logo.title)
+  )
 
+  return (
+    <div
+      className="
+        w-full sm:w-[85%] lg:w-[22%]
+        bg-indigo-950/60 text-white
+        rounded-2xl shadow-lg overflow-hidden
+        transition hover:-translate-y-1 hover:shadow-2xl
+      "
+    >
+      {/* Image preview (clickable) */}
+      <div
+        className="relative h-44 w-full overflow-hidden"
+      >
+        <Image
+          src={`/photos/${image}`}
+          alt={`${name} preview`}
+          fill
+          className="object-cover transition-transform duration-300 hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 25vw"
+        />
+      </div>
 
-    return(
+      {/* Content */}
+      <div className="mt-10 text-center">
+        <h1 className="text-2xl font-extrabold tracking-tight">{name}</h1>
+        <p className="mt-3 text-sm text-indigo-200 leading-relaxed">{description}</p>
 
-        <div className="bg-indigo-900/40
-                        w-[80%] lg:w-[20%] p-10
-                        justify-center text-center rounded-4xl">
+        {filteredLogos.length > 0 && (
+          <div className="mt-5">
+            <LogoLoop
+              logos={filteredLogos}
+              speed={25}
+              direction="left"
+              logoHeight={36}
+              gap={32}
+              hoverSpeed={0}
+              scaleOnHover
+              fadeOut
+              fadeOutColor="#1e1b4b"
+              ariaLabel="Skills Used"
+            />
+          </div>
+        )}
 
-            <h1 className="text-4xl font-black">
-                {name}
-            </h1>
-            <h2 className="mt-10">
-                {description}
-            </h2>
-            <div className="mt-10">
-
-                
-                <LogoLoop
-                    logos={filteredLogos}
-                    speed={30}
-                    direction="left"
-                    logoHeight={48}
-                    gap={40}
-                    hoverSpeed={0}
-                    scaleOnHover
-                    fadeOut
-                    fadeOutColor="#1e1b4b"
-                    ariaLabel="Skills Used"
-                />
-            </div>
-
-            <Status status={status}/>
-
-            <div className="mt-10">
-                <a href={link} target="_blank">
-                    <InteractiveHoverButton >
-                        Live Demo
-                    </InteractiveHoverButton>
-                </a>
-            </div>
-
+        <div className="mt-5 flex justify-center">
+          <Status status={status} />
         </div>
 
-    )
+        <div className="my-6 flex justify-center">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <InteractiveHoverButton>Live Demo</InteractiveHoverButton>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  )
 }

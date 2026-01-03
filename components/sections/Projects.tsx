@@ -15,26 +15,31 @@ const projects = [
         description: "A dynamic PHP website based around a fictional hotel.", 
         skillsUsed: ["HTML5", "CSS3", "Php"],
         status: "deployed",
-        link: "https://yoruhotel.ct.ws/"},
+        link: "https://yoruhotel.ct.ws/",
+        image: "yoru-hotel.png"},
+        
 
     {   name: "Majestic Balinese", 
         description: "A website for a beach resort in the Philippines.", 
         skillsUsed: ["React", "Next.js", "NodeJS", "Tailwind CSS", "Typescript"],
         status: "developing",
-        link: "https://majestic-balinese.vercel.app/"},
+        link: "https://majestic-balinese.vercel.app/",
+        image: "majestic-balinese.png"},
 
     {   name: "Para", 
         description: "Among the Top 5 submissions of HACK THE FUTURE: Smart Batangas Province Hackathon", 
         skillsUsed: ["HTML5", "CSS3", "TypeScript"],
         status: "developing",
-        link: "https://github.com/selrvk"},
+        link: "https://github.com/selrvk",
+        image: "yoru-hotel.png"},
     
 
     {   name: "Bnuuy", 
         description: "A Next.js website focused on providing a platform for bunny rehoming and a marketplace for bunny products", 
         skillsUsed: ["React", "Next.js", "NodeJS", "Tailwind CSS", "TypeScript"],
         status: "developing",
-        link: "https://github.com/selrvk"},
+        link: "https://github.com/selrvk",
+        image: "yoru-hotel.png"},
 
 ]
 
