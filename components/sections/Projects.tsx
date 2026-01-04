@@ -31,7 +31,7 @@ const projects = [
         skillsUsed: ["HTML5", "CSS3", "TypeScript"],
         status: "developing",
         link: "https://github.com/selrvk",
-        image: "yoru-hotel.png"},
+        image: "../Selrvk-Logo.png"},
     
 
     {   name: "Bnuuy", 
@@ -39,7 +39,7 @@ const projects = [
         skillsUsed: ["React", "Next.js", "NodeJS", "Tailwind CSS", "TypeScript"],
         status: "developing",
         link: "https://github.com/selrvk",
-        image: "yoru-hotel.png"},
+        image: "../Selrvk-Logo.png"},
 
 ]
 
