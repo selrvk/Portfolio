@@ -47,7 +47,7 @@ export default function Projects(){
 
     return(
         
-        <section id="projects" className="flex flex-col justify-center text-center mt-50 ">
+        <section id="projects" className="flex flex-col justify-center text-center mt-70">
 
             <motion.div
                 initial={{ opacity: 0, y:50 }}   
@@ -56,7 +56,7 @@ export default function Projects(){
                 transition={{ duration: 0.8, ease: "easeOut" }}
             >
 
-            <h1 className="text-4xl xl:text-6xl  2xl:text-8xl font-bold text-center mt-20 pb-5
+            <h1 className="text-4xl xl:text-6xl 2xl:text-8xl font-bold text-center pb-5
                     bg-linear-to-b from-white to-transparent 
                     bg-clip-text text-transparent">
                     Projects

@@ -6,18 +6,18 @@ export default function AboutMe(){
     const [isExpanded, setIsExpanded] = useState(false);
 
     return(
-        <section id="aboutme" className="flex justify-center">
+        <section id="aboutme" className="flex justify-center mt-70">
             
             <motion.div
                 initial={{ opacity: 0, y:50 }}   
                 whileInView={{ opacity: 1, y: 0 }} 
                 viewport={{ once: false, amount: 0.2 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className='flex flex-col items-center justify-self-center text-center w-[80%] mt-50'
+                className='flex flex-col items-center justify-self-center text-center w-[80%]'
             >
 
-            <h1 className="text-4xl xl:text-6xl 2xl:text-8xl font-bold text-center mt-50 p-10
-                    bg-gradient-to-b from-white to-gray-400
+            <h1 className="text-4xl xl:text-6xl 2xl:text-8xl font-bold text-center p-10
+                    bg-linear-to-b from-white to-transparent
                     bg-clip-text text-transparent">
                     About Me
             </h1>
