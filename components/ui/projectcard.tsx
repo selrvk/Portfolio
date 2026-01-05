@@ -2,7 +2,8 @@ import LogoLoop from "../LogoLoop"
 import Status from "../Status";
 import Image from "next/image"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button"
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPhp, SiHtml5, SiCss3, SiNodedotjs} from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPhp, SiHtml5, SiCss3, SiNodedotjs, SiSupabase} from 'react-icons/si';
+import { RainbowButton } from "@/components/ui/rainbow-button"
 
 const techLogos = [
   { node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -12,7 +13,8 @@ const techLogos = [
   { node: <SiPhp />, title: "Php", href: "https://php.net" },
   { node: <SiCss3 />, title: "CSS3", href: "https://www.w3schools.com/css/" },
   { node: <SiHtml5 />, title: "HTML5", href: "https://www.w3schools.com/html/" },
-  { node: <SiNodedotjs />, title: "NodeJS", href: "https://nodejs.org/en" }
+  { node: <SiNodedotjs />, title: "NodeJS", href: "https://nodejs.org/en" },
+  { node: <SiSupabase />, title: "Supabase", href: "https://supabase.com/"},
 ];
 
 interface projectprops {
@@ -22,11 +24,12 @@ interface projectprops {
     skillsUsed: Array<string>,
     status: string,
     link: string,
+    sourcelink: string,
     image: string
 }
 
 
-export default function ProjectCard({ name, description, skillsUsed, status, link, image }: projectprops) {
+export default function ProjectCard({ name, description, skillsUsed, status, link, sourcelink, image }: projectprops) {
 
   const filteredLogos = techLogos.filter((logo) =>
     skillsUsed.includes(logo.title)
@@ -41,7 +44,6 @@ export default function ProjectCard({ name, description, skillsUsed, status, lin
         transition hover:-translate-y-1 hover:shadow-2xl
       "
     >
-      {/* Image preview (clickable) */}
       <div
         className="relative h-44 w-full overflow-hidden"
       >
@@ -49,7 +51,7 @@ export default function ProjectCard({ name, description, skillsUsed, status, lin
           src={`/photos/${image}`}
           alt={`${name} preview`}
           fill
-          className="object-cover transition-transform duration-300 hover:scale-105"
+          className="transition-transform duration-300 hover:scale-105"
           sizes="(max-width: 768px) 100vw, 25vw"
         />
       </div>
@@ -86,6 +88,10 @@ export default function ProjectCard({ name, description, skillsUsed, status, lin
           </a>
         </div>
       </div>
+      
+      <a href={sourcelink} target="_blank" rel="noopener noreferrer">
+        <RainbowButton className="mb-5">Source Code</RainbowButton>
+      </a>
       
     </div>
   )

@@ -16,14 +16,16 @@ const projects = [
         skillsUsed: ["HTML5", "CSS3", "Php"],
         status: "deployed",
         link: "https://yoruhotel.ct.ws/",
+        sourcelink: "https://github.com/selrvk/yoru-hotel",
         image: "yoru-hotel.png"},
         
 
     {   name: "Majestic Balinese", 
-        description: "A website for a beach resort in the Philippines.", 
+        description: "A website for a beach resort in Calatagan, Philippines.", 
         skillsUsed: ["React", "Next.js", "NodeJS", "Tailwind CSS", "Typescript"],
         status: "developing",
         link: "https://majestic-balinese.vercel.app/",
+        sourcelink: "https://github.com/selrvk/Majestic-Balinese",
         image: "majestic-balinese.png"},
 
     {   name: "Para", 
@@ -31,7 +33,8 @@ const projects = [
         skillsUsed: ["HTML5", "CSS3", "TypeScript"],
         status: "developing",
         link: "https://github.com/selrvk",
-        image: "../Selrvk-Logo.png"},
+        sourcelink: "https://github.com/selrvk/FNV-Inventory",
+        image: "no-preview.png"},
     
 
     {   name: "Bnuuy", 
@@ -39,7 +42,16 @@ const projects = [
         skillsUsed: ["React", "Next.js", "NodeJS", "Tailwind CSS", "TypeScript"],
         status: "developing",
         link: "https://github.com/selrvk",
-        image: "../Selrvk-Logo.png"},
+        sourcelink: "https://github.com/selrvk/eCommerce",
+        image: "no-preview.png"},
+
+    {   name: "Inventory Management System", 
+        description: "An inventory management system developed to cater for a local business in Batangas City.", 
+        skillsUsed: ["Next.js", "Supabase", "Tailwind CSS", "TypseScript", "NodeJS", "React"],
+        status: "developing",
+        link: "https://github.com/selrvk/FNV-Inventory",
+        sourcelink: "https://github.com/selrvk/FNV-Inventory",
+        image: "inventory-management.png"},
 
 ]
 
