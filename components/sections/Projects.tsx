@@ -74,7 +74,7 @@ export default function Projects(){
                     Projects
             </h1>
                 
-            <div className="block lg:hidden mt-30 flex justify-center ">
+            <div className="block lg:hidden mt-30 justify-center ">
 
                 <Carousel className="justify-self-center max-w-[70%] ">
 

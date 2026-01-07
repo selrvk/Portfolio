@@ -90,7 +90,7 @@ export default function ProjectCard({ name, description, skillsUsed, status, lin
       </div>
       
       <a href={sourcelink} target="_blank" rel="noopener noreferrer">
-        <RainbowButton className="mb-5">Source Code</RainbowButton>
+        <RainbowButton className="mb-5" size="sm">Source Code</RainbowButton>
       </a>
       
     </div>
